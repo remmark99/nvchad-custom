@@ -19,7 +19,14 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
-  b.diagnostics.cppcheck,
+  b.diagnostics.cppcheck.with {
+    args = { "--language=c++" },
+  },
+  b.diagnostics.cpplint,
+
+  -- python
+  b.diagnostics.flake8,
+  b.formatting.autopep8,
 }
 
 null_ls.setup {
