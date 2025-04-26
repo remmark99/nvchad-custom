@@ -13,7 +13,7 @@ map("n", "[d", function()
   vim.diagnostic.open_float()      -- Show diagnostics under the cursor
 end, { desc = "Go to next diagnostic and show it" })
 -- Map [d to go to next diagnostic and show diagnostics under the cursor
-map("n", "[D", function()
+map("n", "]d", function()
   vim.diagnostic.goto_prev()       -- Go to the next diagnostic
   vim.diagnostic.open_float()      -- Show diagnostics under the cursor
 end, { desc = "Go to next diagnostic and show it" })
